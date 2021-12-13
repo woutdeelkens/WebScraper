@@ -1,0 +1,16 @@
+E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\bin\Debug\netcoreapp3.1\indeedScraper.exe
+E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\bin\Debug\netcoreapp3.1\indeedScraper.deps.json
+E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\bin\Debug\netcoreapp3.1\indeedScraper.runtimeconfig.json
+E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\bin\Debug\netcoreapp3.1\indeedScraper.runtimeconfig.dev.json
+E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\bin\Debug\netcoreapp3.1\indeedScraper.dll
+E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\bin\Debug\netcoreapp3.1\indeedScraper.pdb
+E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\bin\Debug\netcoreapp3.1\WebDriver.dll
+E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\obj\Debug\netcoreapp3.1\indeedScraper.csproj.AssemblyReference.cache
+E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\obj\Debug\netcoreapp3.1\indeedScraper.GeneratedMSBuildEditorConfig.editorconfig
+E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\obj\Debug\netcoreapp3.1\indeedScraper.AssemblyInfoInputs.cache
+E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\obj\Debug\netcoreapp3.1\indeedScraper.AssemblyInfo.cs
+E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\obj\Debug\netcoreapp3.1\indeedScraper.csproj.CoreCompileInputs.cache
+E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\obj\Debug\netcoreapp3.1\indeedScraper.dll
+E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\obj\Debug\netcoreapp3.1\indeedScraper.pdb
+E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\obj\Debug\netcoreapp3.1\indeedScraper.genruntimeconfig.cache
