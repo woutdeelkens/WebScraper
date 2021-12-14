@@ -85,46 +85,32 @@ namespace WebScraperDemo
                 Console.WriteLine("\n");
 
                 sbOutput.AppendLine(string.Join(strSeperator, "****** Video " + (i + 1) + " ******"));
-                // Create and write the csv file
                 File.WriteAllText(strFilePath, sbOutput.ToString());
-                // To append more lines to the csv file
-                // File.AppendAllText(strFilePath, sbOutput.ToString());
 
                 sbOutput.AppendLine(string.Join(strSeperator, title.Text));
-                // Create and write the csv file
                 File.WriteAllText(strFilePath, sbOutput.ToString());
-                // To append more lines to the csv file
-                // File.AppendAllText(strFilePath, sbOutput.ToString());
 
                 sbOutput.AppendLine(string.Join(strSeperator, uploader.Text));
-                // Create and write the csv file
                 File.WriteAllText(strFilePath, sbOutput.ToString());
-                // To append more lines to the csv file
-                // File.AppendAllText(strFilePath, sbOutput.ToString());
 
                 sbOutput.AppendLine(string.Join(strSeperator, weergaven.Text));
-                // Create and write the csv file
                 File.WriteAllText(strFilePath, sbOutput.ToString());
-                // To append more lines to the csv file
-                // File.AppendAllText(strFilePath, sbOutput.ToString());
 
                 sbOutput.AppendLine(string.Join(strSeperator, "\n"));
-                // Create and write the csv file
                 File.WriteAllText(strFilePath, sbOutput.ToString());
-                // To append more lines to the csv file
-                // File.AppendAllText(strFilePath, sbOutput.ToString());
 
             }
 
-
-
             Console.WriteLine("Scraping Data from youtube.com Done");
-
 
         }
 
         static void Indeed()
         {
+            String strFilePath = @"E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\Data.csv";
+            string strSeperator = ",";
+            StringBuilder sbOutput = new StringBuilder();
+
             Console.WriteLine("Geef zoekterm: ");
             String zoekTerm = Console.ReadLine();
             Console.WriteLine("Hoeveel vacatures wil je te zien krijgen: ");
@@ -159,14 +145,37 @@ namespace WebScraperDemo
                 Console.WriteLine("Locatie: " + locatie.Text);
                 Console.WriteLine("************************");
                 Console.WriteLine("\n");
+
+                sbOutput.AppendLine(string.Join(strSeperator, "****** Video " + (i + 1) + " ******"));
+                File.WriteAllText(strFilePath, sbOutput.ToString());
+
+                sbOutput.AppendLine(string.Join(strSeperator, title.Text));
+                File.WriteAllText(strFilePath, sbOutput.ToString());
+
+                sbOutput.AppendLine(string.Join(strSeperator, bedrijf.Text));
+                File.WriteAllText(strFilePath, sbOutput.ToString());
+
+                sbOutput.AppendLine(string.Join(strSeperator, locatie.Text));
+                File.WriteAllText(strFilePath, sbOutput.ToString());
+
+                sbOutput.AppendLine(string.Join(strSeperator, "\n"));
+                File.WriteAllText(strFilePath, sbOutput.ToString());
             }
             Console.WriteLine("Scraping Data from indeed.com Done");
         }
 
         static void Coolblue()
         {
+            String strFilePath = @"E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\Data.csv";
+            string strSeperator = ",";
+            StringBuilder sbOutput = new StringBuilder();
+
             Console.WriteLine("Geef zoekterm: ");
             String zoekTerm = Console.ReadLine();
+            Console.WriteLine("Hoeveel vacatures wil je te zien krijgen: ");
+            String hoeveelheid = Console.ReadLine();
+            int x = 0;
+            Int32.TryParse(hoeveelheid, out x);
             IWebDriver driver = new ChromeDriver();
             driver.Navigate().GoToUrl("https://www.coolblue.be/nl");
             Thread.Sleep(500);
@@ -179,7 +188,7 @@ namespace WebScraperDemo
 
             var product = driver.FindElements(By.ClassName("product-card"));
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < x; i++)
             {
                 var naam = product[i].FindElement(By.ClassName("h3"));
                 //var prijs = product[i].FindElement(By.ClassName("mr--2"));
@@ -191,6 +200,20 @@ namespace WebScraperDemo
                 Console.WriteLine("Levertijd: " + levertijd.Text);
                 Console.WriteLine("************************");
                 Console.WriteLine("\n");
+                sbOutput.AppendLine(string.Join(strSeperator, "****** Video " + (i + 1) + " ******"));
+                File.WriteAllText(strFilePath, sbOutput.ToString());
+
+                sbOutput.AppendLine(string.Join(strSeperator, naam.Text));
+                File.WriteAllText(strFilePath, sbOutput.ToString());
+
+                sbOutput.AppendLine(string.Join(strSeperator, prijs.Text));
+                File.WriteAllText(strFilePath, sbOutput.ToString());
+
+                sbOutput.AppendLine(string.Join(strSeperator, levertijd.Text));
+                File.WriteAllText(strFilePath, sbOutput.ToString());
+
+                sbOutput.AppendLine(string.Join(strSeperator, "\n"));
+                File.WriteAllText(strFilePath, sbOutput.ToString());
             }
 
 

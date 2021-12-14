@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U8K5JxicEJs75T5ckAn8hEy3G/R7UmEjeXM6YQVnHrepod3xhuroWkZt4z8NUkwl35PxnpnPr5lER47Mc0Q3FQ==",
+  "dgSpecHash": "msg4v9dSeyzFxkuCL9Dp5VQMEywIRawCcYsSYd8Mtcq+8K+j9a4Aa481tyV8Eq53w38xi0cgcDiNoFbty3HYzw==",
   "success": true,
-  "projectFilePath": "E:\\School\\WebScraperDemo\\WebScraperDemo\\WebScraperDemo\\Scraper.csproj",
+  "projectFilePath": "E:\\School\\WebScraper\\WebScraperDemo\\Scraper.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gebruiker\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Gebruiker\\.nuget\\packages\\selenium.webdriver\\4.0.1\\selenium.webdriver.4.0.1.nupkg.sha512"

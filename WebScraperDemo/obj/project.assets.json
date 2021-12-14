@@ -88,11 +88,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\School\\WebScraperDemo\\WebScraperDemo\\WebScraperDemo\\Scraper.csproj",
+      "projectUniqueName": "E:\\School\\WebScraper\\WebScraperDemo\\Scraper.csproj",
       "projectName": "Scraper",
-      "projectPath": "E:\\School\\WebScraperDemo\\WebScraperDemo\\WebScraperDemo\\Scraper.csproj",
+      "projectPath": "E:\\School\\WebScraper\\WebScraperDemo\\Scraper.csproj",
       "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-      "outputPath": "E:\\School\\WebScraperDemo\\WebScraperDemo\\WebScraperDemo\\obj\\",
+      "outputPath": "E:\\School\\WebScraper\\WebScraperDemo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
