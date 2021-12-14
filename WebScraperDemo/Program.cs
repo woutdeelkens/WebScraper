@@ -44,8 +44,15 @@ namespace WebScraperDemo
 
         static void Youtube()
         {
-            String strFilePath = @"E:\School\WebScraper\WebScraperDemo\Youtube.csv"; //change to your path
+            
             string strSeperator = ",";
+            string strExeFilePath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            string strPath1 = System.IO.Path.GetDirectoryName(strExeFilePath);
+            string strPath2 = System.IO.Path.GetDirectoryName(strPath1);
+            string strPath3 = System.IO.Path.GetDirectoryName(strPath2);
+            string strPath4 = System.IO.Path.GetDirectoryName(strPath3);
+            string strPathCsv = System.IO.Path.Combine(strPath4, "Youtube.csv");
+            
             StringBuilder sbOutput = new StringBuilder();
 
 
@@ -88,19 +95,19 @@ namespace WebScraperDemo
                 Console.WriteLine("\n");
 
                 sbOutput.AppendLine(string.Join(strSeperator, "****** Video " + (i + 1) + " ******"));
-                File.WriteAllText(strFilePath, sbOutput.ToString());
+                File.WriteAllText(strPathCsv, sbOutput.ToString());
 
                 sbOutput.AppendLine(string.Join(strSeperator, title.Text));
-                File.WriteAllText(strFilePath, sbOutput.ToString());
+                File.WriteAllText(strPathCsv, sbOutput.ToString());
 
                 sbOutput.AppendLine(string.Join(strSeperator, uploader.Text));
-                File.WriteAllText(strFilePath, sbOutput.ToString());
+                File.WriteAllText(strPathCsv, sbOutput.ToString());
 
                 sbOutput.AppendLine(string.Join(strSeperator, weergaven.Text));
-                File.WriteAllText(strFilePath, sbOutput.ToString());
+                File.WriteAllText(strPathCsv, sbOutput.ToString());
 
                 sbOutput.AppendLine(string.Join(strSeperator, "\n"));
-                File.WriteAllText(strFilePath, sbOutput.ToString());
+                File.WriteAllText(strPathCsv, sbOutput.ToString());
 
             }
 
@@ -110,8 +117,13 @@ namespace WebScraperDemo
 
         static void Indeed()
         {
-            String strFilePath = @"E:\School\WebScraper\WebScraperDemo\Indeed.csv"; //change to your path
             string strSeperator = ",";
+            string strExeFilePath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            string strPath1 = System.IO.Path.GetDirectoryName(strExeFilePath);
+            string strPath2 = System.IO.Path.GetDirectoryName(strPath1);
+            string strPath3 = System.IO.Path.GetDirectoryName(strPath2);
+            string strPath4 = System.IO.Path.GetDirectoryName(strPath3);
+            string strPathCsv = System.IO.Path.Combine(strPath4, "Indeed.csv");
             StringBuilder sbOutput = new StringBuilder();
 
             Console.WriteLine("Geef zoekterm: ");
@@ -147,27 +159,32 @@ namespace WebScraperDemo
                 i++; 
 
                 sbOutput.AppendLine(string.Join(strSeperator, "****** Vacature " + (i + 1) + " ******"));
-                File.WriteAllText(strFilePath, sbOutput.ToString());
+                File.WriteAllText(strPathCsv, sbOutput.ToString());
 
                 sbOutput.AppendLine(string.Join(strSeperator, title.Text));
-                File.WriteAllText(strFilePath, sbOutput.ToString());
+                File.WriteAllText(strPathCsv, sbOutput.ToString());
 
                 sbOutput.AppendLine(string.Join(strSeperator, bedrijf.Text));
-                File.WriteAllText(strFilePath, sbOutput.ToString());
+                File.WriteAllText(strPathCsv, sbOutput.ToString());
 
                 sbOutput.AppendLine(string.Join(strSeperator, locatie.Text));
-                File.WriteAllText(strFilePath, sbOutput.ToString());
+                File.WriteAllText(strPathCsv, sbOutput.ToString());
 
                 sbOutput.AppendLine(string.Join(strSeperator, "\n"));
-                File.WriteAllText(strFilePath, sbOutput.ToString());
+                File.WriteAllText(strPathCsv, sbOutput.ToString());
             }
             Console.WriteLine("Scraping Data from indeed.com Done");
         }
 
         static void Coolblue()
         {
-            String strFilePath = @"E:\School\WebScraper\WebScraperDemo\Coolblue.csv"; //change to your path
             string strSeperator = ",";
+            string strExeFilePath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            string strPath1 = System.IO.Path.GetDirectoryName(strExeFilePath);
+            string strPath2 = System.IO.Path.GetDirectoryName(strPath1);
+            string strPath3 = System.IO.Path.GetDirectoryName(strPath2);
+            string strPath4 = System.IO.Path.GetDirectoryName(strPath3);
+            string strPathCsv = System.IO.Path.Combine(strPath4, "Coolblue.csv");
             StringBuilder sbOutput = new StringBuilder();
 
             Console.WriteLine("Geef zoekterm: ");
@@ -200,19 +217,19 @@ namespace WebScraperDemo
                 Console.WriteLine("************************");
                 Console.WriteLine("\n");
                 sbOutput.AppendLine(string.Join(strSeperator, "****** Artikel " + (i) + " ******"));
-                File.WriteAllText(strFilePath, sbOutput.ToString());
+                File.WriteAllText(strPathCsv, sbOutput.ToString());
 
                 sbOutput.AppendLine(string.Join(strSeperator, naam.Text));
-                File.WriteAllText(strFilePath, sbOutput.ToString());
+                File.WriteAllText(strPathCsv, sbOutput.ToString());
 
                 sbOutput.AppendLine(string.Join(strSeperator, prijs.Text));
-                File.WriteAllText(strFilePath, sbOutput.ToString());
+                File.WriteAllText(strPathCsv, sbOutput.ToString());
 
                 sbOutput.AppendLine(string.Join(strSeperator, levertijd.Text));
-                File.WriteAllText(strFilePath, sbOutput.ToString());
+                File.WriteAllText(strPathCsv, sbOutput.ToString());
 
                 sbOutput.AppendLine(string.Join(strSeperator, "\n"));
-                File.WriteAllText(strFilePath, sbOutput.ToString());
+                File.WriteAllText(strPathCsv, sbOutput.ToString());
             }
 
 
