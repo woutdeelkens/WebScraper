@@ -19,8 +19,6 @@ namespace WebScraperDemo
             Console.WriteLine("Keuze: ");
             String keuze = Console.ReadLine();
             
-            
-            
 
             if (keuze == "A" || keuze == "a")
             {
@@ -35,12 +33,8 @@ namespace WebScraperDemo
             else if (keuze == "C" || keuze == "c")
             {
                 Coolblue();
-            }
-
-            
+            }   
         }
-
-        
 
         static void Youtube()
         {
@@ -134,15 +128,45 @@ namespace WebScraperDemo
             element.SendKeys(zoekTerm);
             element.Submit();
 
-            var knop_datum = driver.FindElement(By.Id("filter-dateposted"));
-            knop_datum.Click();
-            var knop_3dagen = driver.FindElement(By.XPath("/html/body/table[1]/tbody/tr/td/div/div[2]/div/div[1]/ul/li[2]"));
-            knop_3dagen.Click();
+            //var knop_datum = driver.FindElement(By.Id("filter-dateposted"));
+            //knop_datum.Click();
+            //var knop_3dagen = driver.FindElement(By.XPath("/html/body/table[1]/tbody/tr/td/div/div[2]/div/div[1]/ul/li[2]"));
+            //knop_3dagen.Click();
             Thread.Sleep(500);
-            var sluit_popup = driver.FindElement(By.ClassName("popover-x-button-close"));
-            sluit_popup.Click();
+            //var sluit_popup = driver.FindElement(By.ClassName("popover-x-button-close"));
+            //sluit_popup.Click();
+            //var cookies = driver.FindElement(By.Id("onetrust-accept-btn-handler"));
+            //cookies.Click();
+            //Thread.Sleep(500);
+
+            var advanced = driver.FindElement(By.XPath("/html/body/table[1]/tbody/tr/td/div/div[1]/form/a"));
+            advanced.Click();
+
+            Thread.Sleep(500);
+
             var cookies = driver.FindElement(By.Id("onetrust-accept-btn-handler"));
             cookies.Click();
+
+            var date = driver.FindElement(By.XPath("/html/body/div[2]/form/fieldset[2]/div[2]/div[2]/select"));
+            date.Click();
+
+            var knop_3dagen = driver.FindElement(By.XPath("/html/body/div[2]/form/fieldset[2]/div[2]/div[2]/select/option[4]"));
+            knop_3dagen.Click();
+
+            var aantal = driver.FindElement(By.XPath("/html/body/div[2]/form/fieldset[2]/div[3]/div/div[2]/select"));
+            aantal.Click();
+
+            var toon_50 = driver.FindElement(By.XPath("/html/body/div[2]/form/fieldset[2]/div[3]/div/div[2]/select/option[4]"));
+            toon_50.Click();
+
+            var vacatures_zoeken = driver.FindElement(By.XPath("/html/body/div[2]/form/button"));
+            vacatures_zoeken.Click();
+
+            Thread.Sleep(500);
+
+            var sluit_popup = driver.FindElement(By.ClassName("popover-x-button-close"));
+            sluit_popup.Click();
+
             var ads = driver.FindElements(By.ClassName("job_seen_beacon"));
             int i = 0;
             foreach (IWebElement ad in ads)
@@ -231,7 +255,6 @@ namespace WebScraperDemo
                 sbOutput.AppendLine(string.Join(strSeperator, "\n"));
                 File.WriteAllText(strPathCsv, sbOutput.ToString());
             }
-
 
             Console.WriteLine("Scraping Data from Coolblue Done");
         }
