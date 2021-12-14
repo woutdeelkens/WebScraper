@@ -44,7 +44,7 @@ namespace WebScraperDemo
 
         static void Youtube()
         {
-            String strFilePath = @"E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\Data.csv";
+            String strFilePath = @"E:\School\WebScraper\WebScraperDemo\Youtube.csv"; //change to your path
             string strSeperator = ",";
             StringBuilder sbOutput = new StringBuilder();
 
@@ -55,6 +55,7 @@ namespace WebScraperDemo
             driver.Navigate().GoToUrl("https://www.youtube.com/");
             var cookies = driver.FindElement(By.XPath("/html/body/ytd-app/ytd-consent-bump-v2-lightbox/tp-yt-paper-dialog/div[4]/div[2]/div[5]/div[2]/ytd-button-renderer[2]/a/tp-yt-paper-button"));
             cookies.Click();
+            Thread.Sleep(500);
             var element = driver.FindElement(By.XPath("/html/body/ytd-app/div/div/ytd-masthead/div[3]/div[2]/ytd-searchbox/form/div[1]/div[1]/input"));
 
             Thread.Sleep(500);
@@ -77,10 +78,12 @@ namespace WebScraperDemo
                 var title = video[i].FindElement(By.Id("video-title"));
                 var uploader = video[i].FindElement(By.Id("channel-info"));
                 var weergaven = video[i].FindElement(By.Id("metadata-line"));
+                var link = video[i].GetAttribute("href");
                 Console.WriteLine("****** Video " + (i + 1) + " ******");
                 Console.WriteLine("Titel: " + title.Text);
                 Console.WriteLine("Uploader: " + uploader.Text);
                 Console.WriteLine("Weergaven: " + weergaven.Text);
+                Console.WriteLine("Link: " + link);
                 Console.WriteLine("*********************");
                 Console.WriteLine("\n");
 
@@ -107,16 +110,12 @@ namespace WebScraperDemo
 
         static void Indeed()
         {
-            String strFilePath = @"E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\Data.csv";
+            String strFilePath = @"E:\School\WebScraper\WebScraperDemo\Indeed.csv"; //change to your path
             string strSeperator = ",";
             StringBuilder sbOutput = new StringBuilder();
 
             Console.WriteLine("Geef zoekterm: ");
             String zoekTerm = Console.ReadLine();
-            Console.WriteLine("Hoeveel vacatures wil je te zien krijgen: ");
-            String hoeveelheid = Console.ReadLine();
-            int x = 0;
-            Int32.TryParse(hoeveelheid, out x);
             IWebDriver driver = new ChromeDriver();
             driver.Navigate().GoToUrl("https://be.indeed.com/");
             var element = driver.FindElement(By.Id("text-input-what"));
@@ -132,21 +131,22 @@ namespace WebScraperDemo
             sluit_popup.Click();
             var cookies = driver.FindElement(By.Id("onetrust-accept-btn-handler"));
             cookies.Click();
-            var ads = driver.FindElements(By.ClassName("tapItem"));
-
-            for (int i = 0; i < x; i++)
+            var ads = driver.FindElements(By.ClassName("job_seen_beacon"));
+            int i = 0;
+            foreach (IWebElement ad in ads)
             {
-                var title = ads[i].FindElement(By.ClassName("jobTitle"));
-                var locatie = ads[i].FindElement(By.ClassName("companyLocation"));
-                var bedrijf = ads[i].FindElement(By.ClassName("companyName"));
+                var title = ad.FindElement(By.ClassName("jobTitle"));
+                var locatie = ad.FindElement(By.ClassName("companyLocation"));
+                var bedrijf = ad.FindElement(By.ClassName("companyName"));
                 Console.WriteLine("****** Vacature " + (i + 1) + " ******");
                 Console.WriteLine("Titel: " + title.Text);
                 Console.WriteLine("Bedrijf: " + bedrijf.Text);
                 Console.WriteLine("Locatie: " + locatie.Text);
                 Console.WriteLine("************************");
                 Console.WriteLine("\n");
+                i++; 
 
-                sbOutput.AppendLine(string.Join(strSeperator, "****** Video " + (i + 1) + " ******"));
+                sbOutput.AppendLine(string.Join(strSeperator, "****** Vacature " + (i + 1) + " ******"));
                 File.WriteAllText(strFilePath, sbOutput.ToString());
 
                 sbOutput.AppendLine(string.Join(strSeperator, title.Text));
@@ -166,13 +166,13 @@ namespace WebScraperDemo
 
         static void Coolblue()
         {
-            String strFilePath = @"E:\School\WebScraperDemo\WebScraperDemo\WebScraperDemo\Data.csv";
+            String strFilePath = @"E:\School\WebScraper\WebScraperDemo\Coolblue.csv"; //change to your path
             string strSeperator = ",";
             StringBuilder sbOutput = new StringBuilder();
 
             Console.WriteLine("Geef zoekterm: ");
             String zoekTerm = Console.ReadLine();
-            Console.WriteLine("Hoeveel vacatures wil je te zien krijgen: ");
+            Console.WriteLine("Hoeveel producten wil je te zien krijgen: ");
             String hoeveelheid = Console.ReadLine();
             int x = 0;
             Int32.TryParse(hoeveelheid, out x);
@@ -191,7 +191,6 @@ namespace WebScraperDemo
             for (int i = 0; i < x; i++)
             {
                 var naam = product[i].FindElement(By.ClassName("h3"));
-                //var prijs = product[i].FindElement(By.ClassName("mr--2"));
                 var prijs = product[i].FindElement(By.ClassName("js-sales-price"));
                 var levertijd = product[i].FindElement(By.ClassName("icon-with-text__text"));
                 Console.WriteLine("****** Product " + (i + 1) + " ******");
@@ -200,7 +199,7 @@ namespace WebScraperDemo
                 Console.WriteLine("Levertijd: " + levertijd.Text);
                 Console.WriteLine("************************");
                 Console.WriteLine("\n");
-                sbOutput.AppendLine(string.Join(strSeperator, "****** Video " + (i + 1) + " ******"));
+                sbOutput.AppendLine(string.Join(strSeperator, "****** Artikel " + (i) + " ******"));
                 File.WriteAllText(strFilePath, sbOutput.ToString());
 
                 sbOutput.AppendLine(string.Join(strSeperator, naam.Text));
