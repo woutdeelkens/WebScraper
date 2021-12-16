@@ -17,3 +17,8 @@ jobs:
       run: dotnet publish -r win-x64 -c Release /p:PublishSingleFile=true
     - name: Show contents of the current working directory
       run: ls -R
+    - name: Upload artifact - Windows
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: Scraper.exe
+        path: WebScraperDemo/bin/Release/netcoreapp3.1/win-x64/publish/Scraper.exe
