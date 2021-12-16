@@ -64,8 +64,12 @@ namespace WebScraperDemo
             element.SendKeys(zoekTerm);
             element.Submit();
 
+            Thread.Sleep(500);
+
             var datum = driver.FindElement(By.XPath("/html/body/ytd-app/div/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[1]/div[2]/ytd-search-sub-menu-renderer/div[1]/div/ytd-toggle-button-renderer/a/tp-yt-paper-button"));
             datum.Click();
+
+            Thread.Sleep(500);
 
             var sorteren_op_datum = driver.FindElement(By.XPath("/html/body/ytd-app/div/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[1]/div[2]/ytd-search-sub-menu-renderer/div[1]/iron-collapse/div/ytd-search-filter-group-renderer[5]/ytd-search-filter-renderer[2]/a/div/yt-formatted-string"));
             sorteren_op_datum.Click();
@@ -174,7 +178,7 @@ namespace WebScraperDemo
                 Console.WriteLine("\n");
                 i++; 
 
-                sbOutput.AppendLine(string.Join(strSeperator, "****** Vacature " + (i + 1) + " ******"));
+                sbOutput.AppendLine(string.Join(strSeperator, "****** Vacature " + i + " ******"));
                 File.WriteAllText(strPathCsv, sbOutput.ToString());
 
                 sbOutput.AppendLine(string.Join(strSeperator, title.Text));
@@ -188,6 +192,7 @@ namespace WebScraperDemo
 
                 sbOutput.AppendLine(string.Join(strSeperator, "\n"));
                 File.WriteAllText(strPathCsv, sbOutput.ToString());
+                i++;
             }
             Console.WriteLine("Scraping Data from indeed.com Done");
         }
