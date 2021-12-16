@@ -15,3 +15,5 @@ jobs:
       run: dotnet build --configuration Release
     - name: Build for Windows
       run: dotnet publish -r win-x64 -c Release /p:PublishSingleFile=true
+    - name: Show contents of the current working directory
+      run: ls -R
