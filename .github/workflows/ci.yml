@@ -11,5 +11,5 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.100
-    - name: Build for Windows
-      run: dotnet publish -r win-x64 --configuration ReleaseComplete
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
