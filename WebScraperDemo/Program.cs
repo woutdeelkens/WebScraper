@@ -83,12 +83,10 @@ namespace WebScraperDemo
                 var title = video[i].FindElement(By.Id("video-title"));
                 var uploader = video[i].FindElement(By.Id("channel-info"));
                 var weergaven = video[i].FindElement(By.Id("metadata-line"));
-                var link = video[i].GetAttribute("href");
                 Console.WriteLine("****** Video " + (i + 1) + " ******");
                 Console.WriteLine("Titel: " + title.Text);
                 Console.WriteLine("Uploader: " + uploader.Text);
                 Console.WriteLine("Weergaven: " + weergaven.Text);
-                Console.WriteLine("Link: " + link);
                 Console.WriteLine("*********************");
                 Console.WriteLine("\n");
 
