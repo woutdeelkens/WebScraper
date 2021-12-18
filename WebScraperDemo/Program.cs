@@ -218,7 +218,7 @@ namespace WebScraperDemo
             Int32.TryParse(hoeveelheid, out x);
             IWebDriver driver = new ChromeDriver();
             driver.Navigate().GoToUrl("https://www.coolblue.be/nl");
-            Thread.Sleep(500);
+            Thread.Sleep(1000);
             var button = driver.FindElement(By.XPath("/html/body/div[7]/div/div[1]/div[2]/div/div[1]/div/div[1]/form/div/div/button"));
             button.Click();
             Thread.Sleep(500);
@@ -233,13 +233,13 @@ namespace WebScraperDemo
                 var naam = product[i].FindElement(By.ClassName("h3"));
                 var prijs = product[i].FindElement(By.ClassName("js-sales-price"));
                 var levertijd = product[i].FindElement(By.ClassName("icon-with-text__text"));
-                Console.WriteLine("****** Product " + (i + 1) + " ******");
+                Console.WriteLine("****** Artikel " + (i + 1) + " ******");
                 Console.WriteLine("Naam: " + naam.Text);
                 Console.WriteLine("Prijs (in EUR): " + prijs.Text);
                 Console.WriteLine("Levertijd: " + levertijd.Text);
                 Console.WriteLine("************************");
                 Console.WriteLine("\n");
-                sbOutput.AppendLine(string.Join(strSeperator, "****** Artikel " + (i) + " ******"));
+                sbOutput.AppendLine(string.Join(strSeperator, "****** Artikel " + (i + 1) + " ******"));
                 File.WriteAllText(strPathCsv, sbOutput.ToString());
 
                 sbOutput.AppendLine(string.Join(strSeperator, naam.Text));
