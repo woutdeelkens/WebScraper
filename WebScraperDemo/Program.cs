@@ -45,7 +45,9 @@ namespace WebScraperDemo
             string strPath2 = System.IO.Path.GetDirectoryName(strPath1);
             string strPath3 = System.IO.Path.GetDirectoryName(strPath2);
             string strPath4 = System.IO.Path.GetDirectoryName(strPath3);
-            string strPathCsv = System.IO.Path.Combine(strPath4, "Youtube.csv");
+            string strPath5 = System.IO.Path.GetDirectoryName(strPath4);
+            string strPathCsv = System.IO.Path.Combine(strPath5, "Youtube.csv");
+
             
             StringBuilder sbOutput = new StringBuilder();
 
@@ -119,7 +121,8 @@ namespace WebScraperDemo
             string strPath2 = System.IO.Path.GetDirectoryName(strPath1);
             string strPath3 = System.IO.Path.GetDirectoryName(strPath2);
             string strPath4 = System.IO.Path.GetDirectoryName(strPath3);
-            string strPathCsv = System.IO.Path.Combine(strPath4, "Indeed.csv");
+            string strPath5 = System.IO.Path.GetDirectoryName(strPath4);
+            string strPathCsv = System.IO.Path.Combine(strPath5, "Indeed.csv");
             StringBuilder sbOutput = new StringBuilder();
 
             Console.WriteLine("Geef zoekterm: ");
@@ -203,7 +206,8 @@ namespace WebScraperDemo
             string strPath2 = System.IO.Path.GetDirectoryName(strPath1);
             string strPath3 = System.IO.Path.GetDirectoryName(strPath2);
             string strPath4 = System.IO.Path.GetDirectoryName(strPath3);
-            string strPathCsv = System.IO.Path.Combine(strPath4, "Coolblue.csv");
+            string strPath5 = System.IO.Path.GetDirectoryName(strPath4);
+            string strPathCsv = System.IO.Path.Combine(strPath5, "Coolblue.csv");
             StringBuilder sbOutput = new StringBuilder();
 
             Console.WriteLine("Geef zoekterm: ");

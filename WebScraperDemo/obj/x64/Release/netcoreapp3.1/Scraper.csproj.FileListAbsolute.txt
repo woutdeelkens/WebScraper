@@ -11,7 +11,6 @@ E:\School\WebScraper\WebScraperDemo\obj\x64\Release\netcoreapp3.1\Scraper.Genera
 E:\School\WebScraper\WebScraperDemo\obj\x64\Release\netcoreapp3.1\Scraper.AssemblyInfoInputs.cache
 E:\School\WebScraper\WebScraperDemo\obj\x64\Release\netcoreapp3.1\Scraper.AssemblyInfo.cs
 E:\School\WebScraper\WebScraperDemo\obj\x64\Release\netcoreapp3.1\Scraper.csproj.CoreCompileInputs.cache
-E:\School\WebScraper\WebScraperDemo\obj\x64\Release\netcoreapp3.1\Scraper.csproj.CopyComplete
 E:\School\WebScraper\WebScraperDemo\obj\x64\Release\netcoreapp3.1\Scraper.dll
 E:\School\WebScraper\WebScraperDemo\obj\x64\Release\netcoreapp3.1\Scraper.pdb
 E:\School\WebScraper\WebScraperDemo\obj\x64\Release\netcoreapp3.1\Scraper.genruntimeconfig.cache
