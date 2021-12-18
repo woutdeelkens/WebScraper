@@ -1,0 +1,17 @@
+E:\School\WebScraper\WebScraperDemo\bin\x64\Release\netcoreapp3.1\Scraper.exe
+E:\School\WebScraper\WebScraperDemo\bin\x64\Release\netcoreapp3.1\Scraper.deps.json
+E:\School\WebScraper\WebScraperDemo\bin\x64\Release\netcoreapp3.1\Scraper.runtimeconfig.json
+E:\School\WebScraper\WebScraperDemo\bin\x64\Release\netcoreapp3.1\Scraper.runtimeconfig.dev.json
+E:\School\WebScraper\WebScraperDemo\bin\x64\Release\netcoreapp3.1\Scraper.dll
+E:\School\WebScraper\WebScraperDemo\bin\x64\Release\netcoreapp3.1\Scraper.pdb
+E:\School\WebScraper\WebScraperDemo\bin\x64\Release\netcoreapp3.1\Newtonsoft.Json.dll
+E:\School\WebScraper\WebScraperDemo\bin\x64\Release\netcoreapp3.1\WebDriver.dll
+E:\School\WebScraper\WebScraperDemo\obj\x64\Release\netcoreapp3.1\Scraper.csproj.AssemblyReference.cache
+E:\School\WebScraper\WebScraperDemo\obj\x64\Release\netcoreapp3.1\Scraper.GeneratedMSBuildEditorConfig.editorconfig
+E:\School\WebScraper\WebScraperDemo\obj\x64\Release\netcoreapp3.1\Scraper.AssemblyInfoInputs.cache
+E:\School\WebScraper\WebScraperDemo\obj\x64\Release\netcoreapp3.1\Scraper.AssemblyInfo.cs
+E:\School\WebScraper\WebScraperDemo\obj\x64\Release\netcoreapp3.1\Scraper.csproj.CoreCompileInputs.cache
+E:\School\WebScraper\WebScraperDemo\obj\x64\Release\netcoreapp3.1\Scraper.csproj.CopyComplete
+E:\School\WebScraper\WebScraperDemo\obj\x64\Release\netcoreapp3.1\Scraper.dll
+E:\School\WebScraper\WebScraperDemo\obj\x64\Release\netcoreapp3.1\Scraper.pdb
+E:\School\WebScraper\WebScraperDemo\obj\x64\Release\netcoreapp3.1\Scraper.genruntimeconfig.cache
